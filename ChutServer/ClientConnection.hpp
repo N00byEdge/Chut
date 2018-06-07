@@ -55,5 +55,4 @@ private:
   bool active = true;
   std::thread thread;
   sf::TcpSocket socket;
-  std::queue<Chut::Message> messagesToBeDelivered;
 };
