@@ -10,12 +10,12 @@ namespace Chut {
     std::string message;
 
     static Message deserialize(sf::TcpSocket &sock) {
-      int sourceLen = 0;
+      size_t sourceLen = 0;
       size_t recieved;
       sock.receive(&sourceLen, 1, recieved);
       if (recieved != 1)
         throw "Could not recieve message";
-      int messageLen = 0;
+      size_t messageLen = 0;
       sock.receive(&messageLen, 2, recieved);
       if (recieved != 2)
         throw "Could not recieve message";

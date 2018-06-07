@@ -4,6 +4,7 @@
 
 #include "SFML/Network.hpp"
 
+#include <functional>
 #include <thread>
 #include <mutex>
 #include <queue>
